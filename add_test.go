@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func sum(a, b int) int {
+	return a + b
+}
+
+func TestSum(t *testing.T) {
+	a := 5
+	b := 6
+	expected := 11
+
+	res := sum(a, b)
+	if res != expected {
+		t.Errorf("Our sum function doesn't work, %d + %d != %d\n", a, b, res)
+	}
+}
